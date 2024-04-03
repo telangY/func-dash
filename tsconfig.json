@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["ES6", "DOM"],
+    "baseUrl": ".",
+    "rootDir": "src",
+    "rootDirs": ["src", "test"],
+    "module": "ES2015",
+    "moduleResolution": "Node",
+    "paths": {
+      "src": ["./src/"]
+    },
+    "allowJs": false,
+    "strict": true,
+    "declaration": true,
+    "noEmit": true,
+    "outDir": "dist",
+    "sourceMap": false
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
