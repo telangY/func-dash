@@ -1,7 +1,7 @@
-import { capitalize } from 'src/string'
-import { expect, test } from 'vitest'
+import { capitalize } from 'src'
+import { expect, it } from 'vitest'
 
-test('string capitalize', () => {
+it('string capitalize', () => {
   expect(capitalize('hello world')).toBe('Hello world')
 
   expect(capitalize('va vava  world')).toBe('Va vava  world')

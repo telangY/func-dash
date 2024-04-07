@@ -69,7 +69,7 @@ export function isPromist(value: any): value is Promise<any> {
 
 // 判断是否为空
 export function isEmpty(value: any): boolean {
-  if (value === true || value === false || value instanceof Boolean)
+  if (value === true || value === false)
     return true
 
   if (value === undefined || value === null)
