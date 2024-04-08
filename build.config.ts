@@ -7,7 +7,24 @@ export default defineBuildConfig([
     declaration: true,
     clean: true,
     rollup: {
-      emitCJS: true
-    }
-  }
+      emitCJS: true,
+    },
+  },
+  {
+    name: 'mini',
+    entries: ['./src/index.ts'],
+    outDir: 'dist/min',
+    declaration: true,
+    clean: true,
+    rollup: {
+      emitCJS: true,
+      esbuild: {
+        minify: true,
+      },
+      output: {
+        name: 'dashy',
+        format: 'umd',
+      },
+    },
+  },
 ])

@@ -3,7 +3,7 @@
     "target": "ES6",
     "lib": ["ES6", "DOM"],
     "baseUrl": ".",
-    "rootDir": "src",
+    "rootDir": ".",
     "rootDirs": ["src", "test"],
     "module": "ES2015",
     "moduleResolution": "Node",
