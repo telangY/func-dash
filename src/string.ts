@@ -1,4 +1,5 @@
 import { MAX_ARRAY_LENGTH, convertCase } from './_common/strings'
+import { isEmpty } from './types'
 
 /**
  *  Converts the first character of string to upper case and the remaining to low case
@@ -133,5 +134,13 @@ export function split(str: string, separator: RegExp | string, limit: number | u
  * @returns converted to string
  */
 export function kebabCase(str: string): string {
-  return str.split(/(?=[A-Z])/g).filter(s => /[a-zA-Z]/g.test(s)).map(s => s.toLowerCase().trim()).join('-')
+  if (!str)
+    return ''
+  // console.log(str.replace(/([A-Z]+)|[\.\-\s_]+/g, (match, p1) => p1 ? capitalize(p1) : '').split(/(?=[A-Z])/))
+  const parts = str.replace(/([A-Z])+/g, capitalize).split(/(?=[A-Z])|[\.\-\s_]/) ?? []
+  if (parts.length === 0 || (parts.length === 1 && isEmpty(parts[0])))
+    return ''
+  if (parts.length === 1 && !isEmpty(parts[0]))
+    return parts[0].toLowerCase()
+  return parts.filter(s => /[a-zA-Z]/g.test(s)).map(s => s.toLowerCase().trim()).join('-')
 }

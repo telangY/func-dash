@@ -1,5 +1,5 @@
 import { camelCase, capitalize, kebabCase, split, strRepeat, toLowerCase, toUpperCase } from 'src'
-import { expect, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 it('string capitalize', () => {
   expect(capitalize('hello world')).toBe('Hello world')
@@ -29,16 +29,34 @@ it('string strRepeat', () => {
   expect(strRepeat('aa', 0)).toBe('')
 })
 
-it('string split ', () => {
-  expect(split('a-b-c', '-', 2)).toStrictEqual(['a', 'b'])
-  expect(split('a-b-c', /a|b/g, 2)).toStrictEqual(['a', 'b'])
-  expect(split('a-b-c', /a|b/g, 0)).toStrictEqual([])
-  expect(split('a-b-c', /a|b|c/g, undefined)).toStrictEqual(['a', 'b', 'c'])
+describe('string split', () => {
+  it('should split string into array of substrings', () => {
+    expect(split('a-b-c', '-', 2)).toStrictEqual(['a', 'b'])
+    expect(split('a-b-c', /a|b/g, 2)).toStrictEqual(['a', 'b'])
+    expect(split('a-b-c', /a|b|c/g, 0)).toStrictEqual([])
+    expect(split('a-b-c', /a|b|c/g, undefined)).toStrictEqual(['a', 'b', 'c'])
+  })
 })
 
-it('string kebanCase ', () => {
-  expect(kebabCase('Foo Bar')).toBe('foo-bar')
-  expect(kebabCase('fooBar')).toBe('foo-bar')
-  // expect(kebabCase('foo-Bar')).toBe('foo-bar')
-  // expect(kebabCase('___FOO_BAR__')).toBe('foo-bar')
+describe('kebabCase', () => {
+  it('should convert camel case to kebab case', () => {
+    expect(kebabCase('camelCaseString')).toBe('camel-case-string')
+  })
+
+  it('should convert Pascal case to kebab case', () => {
+    expect(kebabCase('PascalCaseString')).toBe('pascal-case-string')
+  })
+
+  it('shouw convert line case to kebab case', () => {
+    expect(kebabCase('__FOO_BAR__')).toBe('foo-bar')
+    expect(kebabCase('-FOO-BAR__')).toBe('foo-bar')
+  })
+
+  // it('should convert mixed case to kebab case', () => {
+  //   expect(kebabCase('MiXeD CaSe StrInG')).toBe('mixed-case-string')
+  // })
+
+  it('should handle empty string', () => {
+    expect(kebabCase('')).toBe('')
+  })
 })
