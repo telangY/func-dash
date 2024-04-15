@@ -60,3 +60,10 @@ describe('kebabCase', () => {
     expect(kebabCase('')).toBe('')
   })
 })
+
+describe('upperFirst ', () => {
+  it('should capitalize the first character of a string', () => {
+    expect(capitalize('hello world')).toBe('Hello world')
+    expect(capitalize('va vava  world')).toBe('Va vava  world')
+  })
+})

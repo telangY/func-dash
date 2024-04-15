@@ -144,3 +144,12 @@ export function kebabCase(str: string): string {
     return parts[0].toLowerCase()
   return parts.filter(s => /[a-zA-Z]/g.test(s)).map(s => s.toLowerCase().trim()).join('-')
 }
+
+/**
+ * convert string to first upper
+ * @param str convert to string
+ * @returns converted to string
+ */
+export function upperFirst(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
