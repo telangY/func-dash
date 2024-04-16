@@ -1,0 +1,29 @@
+# sort
+**Sort a list of objects by a numerical property**
+
+## basic usage
+Given an array of objects, return a new array sorted by the numerical property specified in the get function. A third, and optional, argument allows you to sort in descending order instead of the default ascending order.
+
+This function only supports numerical sorting. For alphabetic sorting, see the alphabetical function.
+
+```typescript
+import { sort } from 'dashx'
+
+const fish = [
+  {
+    name: 'Marlin',
+    weight: 105
+  },
+  {
+    name: 'Bass',
+    weight: 8
+  },
+  {
+    name: 'Trout',
+    weight: 13
+  }
+]
+
+sort(fish, f => f.weight) // => [bass, trout, marlin]
+sort(fish, f => f.weight, true) // => [marlin, trout, bass]
+```

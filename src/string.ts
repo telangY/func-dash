@@ -155,7 +155,7 @@ export function upperFirst(str: string) {
 }
 
 /**
- * Splits string into an array of its words.
+ * Splits string into an array of its word
  * @param str the string to inspect
  * @param pattern the pattern to match words
  * @returns the words of string array

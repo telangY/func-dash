@@ -1,8 +1,8 @@
 /**
- * 计算两个的数字的和  暂不支持其他类型
- * @param a 第一个数字
- * @param b 第二个数字
- * @returns 计算结果  数字或者  undefined
+ * Adds two numbers.
+ * @param a the first number in an addition
+ * @param b the second number in an addition
+ * @returns return the totals type number or string or undefined
  */
 export function add<T = number>(a: T, b: T): number | string | undefined {
   if (typeof a === 'number' && typeof b === 'number')
@@ -32,9 +32,9 @@ export function ceil(num: number, precision: number): number {
 }
 
 /**
- * 计算纯数字的数组
- * @param array 原始数据
- * @returns 计算总和
+ * The sum function takes a list of numbers and returns the sum of those numbers.
+ * @param array init array
+ * @returns  the sum of the numbers in the list
  */
 export function sum(array: number[]): number {
   if (array.length === 0)
@@ -45,10 +45,10 @@ export function sum(array: number[]): number {
 }
 
 /**
- * 根据原始数据 计算某个字段的统计值
- * @param array 原始数据
- * @param func 需要计算的结果字段
- * @returns 统计数
+ * Calculate the statistical value of a field based on raw data
+ * @param array  init array
+ * @param func return the field that requires a certain calculation
+ * @returns statistical value
  */
 export function sumBy<T>(array: T[], func: Function): number {
   let result: number = 0

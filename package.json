@@ -20,7 +20,10 @@
     "build": "unbuild",
     "test": "vitest",
     "lint": "eslint .",
-    "lint:fix": "eslint . fix"
+    "lint:fix": "eslint . fix",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.12.1",
@@ -28,6 +31,7 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.3",
     "unbuild": "^2.0.0",
+    "vitepress": "^1.1.0",
     "vitest": "^1.4.0"
   }
 }
