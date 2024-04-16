@@ -153,3 +153,18 @@ export function kebabCase(str: string): string {
 export function upperFirst(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
+
+/**
+ * Splits string into an array of its words.
+ * @param str the string to inspect
+ * @param pattern the pattern to match words
+ * @returns the words of string array
+ */
+export function word(str: string, pattern: RegExp | string): string[] | string {
+  if (!str)
+    return []
+  if (!pattern)
+    return str
+
+  return str.match(pattern) ?? []
+}

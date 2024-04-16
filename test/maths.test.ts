@@ -1,11 +1,21 @@
-import { expect, it } from 'vitest'
-import { add, sum, sumBy } from 'src'
+import { describe, expect, it } from 'vitest'
+import { add, ceil, sum, sumBy } from 'src'
 
 it('maths add', () => {
   expect(add('hello', 'world')).toBe('helloworld')
   // expect(add('hello', 'world')).toBe('hello world')
   expect(add(1, 2)).toBe(3)
   // expect(add(1, 2)).toBe(4)
+})
+
+describe('maths ceil', () => {
+  it('should int', () => {
+    expect(ceil(1.1, 0)).toBe(2)
+  })
+
+  it('should have decimal places', () => {
+    expect(ceil(6.004, 2)).toBe(6.01)
+  })
 })
 
 it('maths sum', () => {

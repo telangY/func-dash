@@ -1,4 +1,4 @@
-import { camelCase, capitalize, kebabCase, split, strRepeat, toLowerCase, toUpperCase } from 'src'
+import { camelCase, capitalize, kebabCase, split, strRepeat, toLowerCase, toUpperCase, word } from 'src'
 import { describe, expect, it } from 'vitest'
 
 it('string capitalize', () => {
@@ -65,5 +65,15 @@ describe('upperFirst ', () => {
   it('should capitalize the first character of a string', () => {
     expect(capitalize('hello world')).toBe('Hello world')
     expect(capitalize('va vava  world')).toBe('Va vava  world')
+  })
+})
+
+describe('word ', () => {
+  it('should word to empty', () => {
+    expect(word('hello world', '')).toBe('hello world')
+  })
+
+  it('should word to an array', () => {
+    expect(word('va vava  world', /[^, ]+/g)).toStrictEqual(['va', 'vava', 'world'])
   })
 })
