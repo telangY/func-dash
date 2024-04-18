@@ -1,3 +1,29 @@
+export function isArgument(val: any): boolean {
+  try {
+    if (typeof val.lenght === 'number' && typeof val.call === 'function')
+      return true
+  }
+  catch (err: any) {
+    if (err.message.indexof('callee') !== -1)
+      return true
+  }
+  return false
+}
+
+export function isBuffer(val: any): boolean {
+  if (val !== null && val.constructor && val.constructor.isBuffer === 'function')
+    return val.constructor.isBuffer(val)
+
+  return false
+}
+
+export function isDate(val: any): boolean {
+  if (val instanceof Date)
+    return true
+
+  return typeof val.toDateString === 'function' && typeof val.getDate === 'function' && typeof val.setDate === 'function'
+}
+
 // 判断是否是 Symbol 类型
 export function isSymbol(value: any): value is symbol {
   return !!value && value.constructor === Symbol
@@ -49,11 +75,6 @@ export function isInt(value: any): value is number {
 // 判断是否是浮点型
 export function isFloat(value: any): value is number {
   return isNumber(value) && value % 1 !== 0
-}
-
-// 判断是否是日期
-export function isDate(value: any): value is Date {
-  return Object.prototype.toString.call(value) === '[object Date]'
 }
 
 // 判断是否是promise
