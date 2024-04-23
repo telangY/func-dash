@@ -1,5 +1,5 @@
 {
-  "name": "dashx",
+  "name": "func-utils",
   "type": "module",
   "private": false,
   "exports": {

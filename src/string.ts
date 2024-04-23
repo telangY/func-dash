@@ -5,7 +5,7 @@ import { isEmpty } from './types'
  *  Converts the first character of string to upper case and the remaining to low case
  * @param str string to capitalize
  * @returns  the capitalized string
- * capitalize('hello world')   -> 'Hello'
+ * capitalize('hello world')   -> 'Hello world'
  * capitalize('va va voom') -> 'Va va voom'
  */
 export function capitalize(str: string): string {
@@ -76,7 +76,7 @@ export function toLowerCase(str: string): string {
  * @param replacement  replacement content
  * @returns the modified string
  */
-export function strReplace(str: string, pattern: RegExp | string, replacement: (...args: any) => string | string): string {
+export function replace(str: string, pattern: RegExp | string, replacement: (...args: any) => string | string): string {
   if (!pattern || !replacement)
     return str
   return str.replace(pattern, replacement)
@@ -88,7 +88,7 @@ export function strReplace(str: string, pattern: RegExp | string, replacement: (
  * @param num the number of times to repeat the string
  * @returns the repeated string
  */
-export function strRepeat(str: string, num: number): string {
+export function repeat(str: string, num: number): string {
   let result = ''
   if (!str || num < 1 || num > Number.MAX_SAFE_INTEGER)
     return result

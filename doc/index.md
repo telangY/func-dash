@@ -11,8 +11,8 @@ hero:
       text: Get Started
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Github
+      link: https://github.com/wealth-light/dashX
 
 features:
   - title: Feature A
