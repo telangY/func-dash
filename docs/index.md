@@ -5,18 +5,18 @@ layout: home
 hero:
   name: "dashx"
   text: "welcome to dashx"
-  tagline: My great project tagline
+  tagline: more faster, more little
   actions:
     - theme: brand
       text: Get Started
-      link: /markdown-examples
+      link: /start
     - theme: alt
       text: Github
-      link: https://github.com/wealth-light/dashX
+      link: https://github.com/wealth-light/func-dash
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Fast
+    details: Use ES6 rewite
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C

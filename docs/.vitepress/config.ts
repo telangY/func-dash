@@ -22,7 +22,9 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Getting Started',
+        link: '/start',
         items: [
+          // { text: 'Getting Started', link: '/markdown-examples' },
           { text: 'Refenerce', link: '/start/refenerce' },
           { text: 'Install', link: '/start/install' },
           // { text: 'Runtime API Examples', link: '/api-examples' },
@@ -30,6 +32,7 @@ export default defineConfig({
       },
       {
         text: 'Array',
+        link: '/array/',
         items: [
           { text: 'sort', link: '/array/sort' },
         ],
