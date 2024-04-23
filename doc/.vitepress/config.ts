@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'func-utils',
-  description: 'welcome to func-utils',
+  title: 'func-dash',
+  description: 'welcome to func-dash',
   lastUpdated: true,
   themeConfig: {
     // carbonAds: {
@@ -13,7 +13,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'github', link: 'https://github.com/wealth-light/dashX' },
+      { text: 'github', link: 'https://github.com/wealth-light/func-dash' },
     ],
     search: {
       provider: 'local',
