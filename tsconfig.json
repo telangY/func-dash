@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ESNext", "DOM"],
     "baseUrl": ".",
     "rootDir": ".",
     "rootDirs": ["src", "test"],
-    "module": "ES2015",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "paths": {
       "src": ["./src/"]

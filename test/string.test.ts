@@ -1,4 +1,4 @@
-import { camelCase, capitalize, kebabCase, split, strRepeat, toLowerCase, toUpperCase, word } from 'src'
+import { camelCase, capitalize, kebabCase, repeat, split, toLowerCase, toUpperCase, word } from 'src'
 import { describe, expect, it } from 'vitest'
 
 it('string capitalize', () => {
@@ -23,10 +23,10 @@ it('string toLowerCase', () => {
   expect(toLowerCase('HHHH1JJJJ')).toBe('hhhh1jjjj')
 })
 
-it('string strRepeat', () => {
-  expect(strRepeat('aa', 3)).toBe('aaaaaa')
-  expect(strRepeat('aa', 1)).toBe('aa')
-  expect(strRepeat('aa', 0)).toBe('')
+it('string repeat', () => {
+  expect(repeat('aa', 3)).toBe('aaaaaa')
+  expect(repeat('aa', 1)).toBe('aa')
+  expect(repeat('aa', 0)).toBe('')
 })
 
 describe('string split', () => {
