@@ -10,7 +10,7 @@ Converts string to camel case.
 - `string` - The converted string.
 
 ```ts
-import { camelCase } from 'dashx'
+import { camelCase } from 'func-dash'
 console.log(camelCase('foo-bar')) // fooBar
 console.log(camelCase('__FOO_BAR__')) // fooBar
 ```

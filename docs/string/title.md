@@ -7,7 +7,7 @@ Formats the given string in title case fashion
 | Returns | `string` | Yes | The formatted string |
 
 ```ts
-import { title } from 'dashx'
+import { title } from 'func-dash'
 console.log(title('hello world')) // Hello World
 console.log(title(undefined)) // ""
 ```

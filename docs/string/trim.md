@@ -10,6 +10,6 @@ Removed leading and trailing whitespace or specified characters from string
 - `string`: The trimmed string.
 
 ```ts
-import { trim } from 'dashx'
+import { trim } from 'func-dash'
 trim('  Hello World  ') // 'Hello World'
 ```

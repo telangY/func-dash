@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "dashx"
-  text: "welcome to dashx"
+  name: "func-dash"
+  text: "welcome to func-dash"
   tagline: more faster, more little
   actions:
     - theme: brand

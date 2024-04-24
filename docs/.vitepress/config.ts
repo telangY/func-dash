@@ -34,7 +34,11 @@ export default defineConfig({
         text: 'Array',
         link: '/array/',
         items: [
+          { text: 'flat', link: '/array/flat' },
+          { text: 'maxItem', link: '/array/maxItem' },
           { text: 'sort', link: '/array/sort' },
+          { text: 'sumItem', link: '/array/sumItem' },
+          { text: 'unique', link: '/array/unique' },
         ],
       },
       {

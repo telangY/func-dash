@@ -12,7 +12,7 @@ Computes number rounded up to precision.
 - `number` rounded number
 
 ```typescript
-import { ceil } from 'dashx'
+import { ceil } from 'func-dash'
 ceil(1.234, 2) // 1.24
 ceil(1.234, 0) // 2
 ceil(1.234, -1) // 1.234

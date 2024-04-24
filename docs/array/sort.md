@@ -7,7 +7,7 @@ Given an array of objects, return a new array sorted by the numerical property s
 This function only supports numerical sorting. For alphabetic sorting, see the alphabetical function.
 
 ```typescript
-import { sort } from 'dashx'
+import { sort } from 'func-dash'
 
 const fish = [
   {

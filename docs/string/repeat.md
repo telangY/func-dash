@@ -8,6 +8,6 @@ repeat a string n times
 | Returns | `string` | the repeated string |
 
 ```ts
-import { repeat } from 'dashx'
+import { repeat } from 'func-dash'
 repeat('a', 3) // 'aaa'
 ```

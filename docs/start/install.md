@@ -5,10 +5,10 @@
 :::code-group
 
 ```sh [pnpm]
-$ pnpm install dashx
+$ pnpm install func-dash
 ```
 
 ```sh [npm]
-$ npm install dashx
+$ npm install func-dash
 ```
 :::

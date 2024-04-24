@@ -10,6 +10,6 @@ Replaces all occurrences of the search string with the replacement string.
 | Returns     | `string`              | Yes      | The string with the replaced values. |
 
 ```ts
-import { replace } from 'dashx'
+import { replace } from 'func-dash'
 console.log(replace('Hello World', 'World', 'Dash')) // Hello Dash
 ```

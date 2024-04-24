@@ -10,6 +10,6 @@ Convert letters to lower case
 - `string` The converted string
 
 ```ts
-import { toLowerCase } from 'dashx'
+import { toLowerCase } from 'func-dash'
 toLowerCase('HELLO WORLD') // hello world
 ```

@@ -12,7 +12,7 @@ Adds two numbers.
 - return the totals.
 
 ```typescript
-import { add } from 'dashx'
+import { add } from 'func-dash'
 add(1, 2) // 3
 add('1', '2', '3') // 123
 ```
