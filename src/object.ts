@@ -1,7 +1,7 @@
 import { isObject, isPrimitive } from './types'
 
 // Merges two objects together into new object
-export function assign<T extends Record<string | symbol | number, any>>(initial: T, override: T): T {
+export function assign<T extends Record<string | symbol | number, any>, K extends Record<string | symbol | number, any>>(initial: T, override: K): T & K {
   if (!initial || !override)
     return initial ?? override ?? {}
 
