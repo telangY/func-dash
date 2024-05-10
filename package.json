@@ -1,8 +1,14 @@
 {
-  "name": "func-dash",
+  "name": "func-dash-plus",
   "type": "module",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://github.com/weight-light/func-dash",
+  "keywords": [
+    "dash",
+    "func-dash",
+    "tools"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.mjs",

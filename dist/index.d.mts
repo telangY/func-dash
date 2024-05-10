@@ -174,4 +174,11 @@ declare function sum(array: number[]): number;
  */
 declare function sumBy<T>(array: T[], func: Function): number;
 
-export { add, camelCase, capitalize, ceil, chunk, counting, flat, group, isArgument, isArray, isBuffer, isDate, isEmpty, isFloat, isFunction, isInt, isNumber, isObject, isPrimitive, isPromist, isString, isSymbol, kebabCase, maxItem, repeat, replace, select, sort, split, sum, sumBy, sumItem, title, toLowerCase, toUpperCase, toggle, trim, unique, upperFirst, word };
+declare function assign<T extends Record<string | symbol | number, any>, K extends Record<string | symbol | number, any>>(initial: T, override: K): T & K;
+declare function clone<T>(obj: T): T;
+declare function mapKeys<TValue, TKey extends string | number | symbol, TNewKey extends string | number | symbol>(obj: Record<TKey, TValue>, func: (key: TKey, value: TValue) => TNewKey): Record<TNewKey, TValue>;
+declare function mapValues<TValue, TKey extends string | number | symbol, TNewValue>(obj: Record<string | number | symbol, TValue>, func: (value: TValue, key: TKey) => TNewValue): Record<TKey, TNewValue>;
+declare function omit<T extends object, TKeys extends keyof T>(obj: T, keys: TKeys[]): Omit<T, TKeys>;
+declare function pick<T extends object, TKeys extends keyof T>(obj: T, keys: TKeys[]): Pick<T, TKeys>;
+
+export { add, assign, camelCase, capitalize, ceil, chunk, clone, counting, flat, group, isArgument, isArray, isBuffer, isDate, isEmpty, isFloat, isFunction, isInt, isNumber, isObject, isPrimitive, isPromist, isString, isSymbol, kebabCase, mapKeys, mapValues, maxItem, omit, pick, repeat, replace, select, sort, split, sum, sumBy, sumItem, title, toLowerCase, toUpperCase, toggle, trim, unique, upperFirst, word };
