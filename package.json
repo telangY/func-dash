@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.1",
   "private": false,
-  "homepage": "https://github.com/weight-light/func-dash",
+  "homepage": "git@github.com:wealth-light/func-dash.git",
   "keywords": [
     "dash",
     "func-dash",
