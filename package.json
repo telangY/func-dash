@@ -1,7 +1,7 @@
 {
   "name": "func-dash-plus",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "homepage": "https://github.com/weight-light/func-dash",
   "keywords": [
