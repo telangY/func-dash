@@ -1,4 +1,4 @@
-import { isObject, isPrimitive } from './types'
+import { isArray, isObject, isPrimitive } from './types'
 
 // Merges two objects together into new object
 export function assign<T extends Record<string | symbol | number, any>, K extends Record<string | symbol | number, any>>(initial: T, override: K): T & K {
@@ -31,6 +31,23 @@ export function clone<T>(obj: T): T {
   })
 
   return newObj
+}
+
+export function keys<TValue extends object>(value: TValue): string[] {
+  if (!value)
+    return []
+
+  const getKeys = (nested: any, paths: string[]): string[] => {
+    if (isObject(nested))
+      return Object.entries(nested).flatMap(([key, value]) => getKeys(value, [...paths, key]))
+
+    if (isArray(nested))
+      return nested.flatMap((item: any, i: number) => getKeys(item, [...paths, `${i}`]))
+
+    return [paths.join('.')]
+  }
+
+  return getKeys(value, [])
 }
 
 // Map over the keys of an object

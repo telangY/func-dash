@@ -23,6 +23,16 @@ describe('object clone func', () => {
   })
 })
 
+describe('object keys func', () => {
+  it('should return keys', () => {
+    const obj = {
+      a: 1,
+      b: 2,
+    }
+    expect(Object.keys(obj)).toStrictEqual(['a', 'b'])
+  })
+})
+
 describe('object mapKeys func', () => {
   it('should map keys', () => {
     const obj = {
